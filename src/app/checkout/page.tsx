@@ -1,9 +1,10 @@
+/* eslint-disable @next/next/no-img-element */
 "use client";
 import React, { useState } from 'react';
 import { Button } from "@/components/common/Button";
 import Navbar from "@/components/common/Navbar";
 import { useCart } from '@/store/cart-store';
-import { ArrowLeft, MapPin, CreditCard, Lock } from 'lucide-react';
+import { ArrowLeft, MapPin, Lock } from 'lucide-react';
 import Link from 'next/link';
 
 export default function Checkout() {

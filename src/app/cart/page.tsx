@@ -1,3 +1,4 @@
+/* eslint-disable @next/next/no-img-element */
 "use client";
 import React from 'react';
 import { Button } from "@/components/common/Button";
@@ -5,7 +6,6 @@ import Navbar from "@/components/common/Navbar";
 import { useCart } from '@/store/cart-store';
 import { Plus, Minus, Trash2, ArrowLeft } from 'lucide-react';
 import Link from 'next/link';
-import Image from 'next/image';
 
 export default function Cart() {
   const { items, removeFromCart, updateQuantity, clearCart } = useCart();

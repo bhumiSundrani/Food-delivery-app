@@ -1,12 +1,11 @@
 "use client";
 import React from "react";
-import { Button } from "@/components/common/Button";
 import Carousel from "@/components/common/Carousel";
 import Navbar from "@/components/common/Navbar";
 import CategoriesList from "@/components/food-items/Category";
 import FeaturedItems from "@/components/food-items/FeaturedItems";
 import Link from "next/link";
-import { ArrowRight, Clock, Star, Truck } from "lucide-react";
+import { ArrowRight } from "lucide-react";
 
 export default function Home() {
   return (
@@ -44,7 +43,9 @@ export default function Home() {
 
       {/* Categories Section */}
       <section className="w-full max-w-7xl mx-auto px-2 sm:px-6 lg:px-8 py-10">
-        <h2 className="text-3xl font-bold text-gray-900">Browse by Category</h2>
+      <div className="flex items-center justify-between mb-8">
+          <h2 className="text-3xl font-bold text-gray-900">Browse by Category</h2>
+        </div>
         <CategoriesList />
         <div className="flex justify-center mt-6">
           <Link href="/menu" className="inline-flex items-center gap-2 bg-orange-500 hover:bg-orange-600 text-white font-semibold px-6 py-2 rounded-lg shadow transition">
