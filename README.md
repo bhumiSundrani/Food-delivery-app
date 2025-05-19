@@ -29,6 +29,7 @@ Live Demo: [https://your-vercel-deployment-url.vercel.app](https://your-vercel-d
 
 ---
 
+
 ## 📦 Getting Started (Local Setup)
 
 1. **Clone the repository**
@@ -36,4 +37,3 @@ Live Demo: [https://your-vercel-deployment-url.vercel.app](https://your-vercel-d
 ```bash
 git clone https://github.com/bhumiSundrani/Food-delivery-app.git
 cd Food-delivery-app
-
