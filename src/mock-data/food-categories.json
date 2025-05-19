@@ -1,0 +1,47 @@
+[
+  {
+    "id": 1,
+    "name": "Burgers",
+    "image": "https://images.unsplash.com/photo-1550547660-d9450f859349?w=800"
+  },
+  {
+    "id": 2,
+    "name": "Pizza",
+    "image": "https://cdn.britannica.com/08/177308-050-94D9D6BE/Food-Pizza-Basil-Tomato.jpg"
+  },
+  {
+    "id": 3,
+    "name": "Pasta",
+    "image": "https://es.cravingsjournal.com/wp-content/uploads/2023/05/pasta-con-salsa-cremosa-de-tomate-1.jpg"
+  },
+  {
+    "id": 4,
+    "name": "Fries",
+    "image": "https://th.bing.com/th/id/OIP.YMcBCV0YsoYknxQqGhOnDAHaE7?rs=1&pid=ImgDetMain"
+  },
+  {
+    "id": 5,
+    "name": "Drinks",
+    "image": "https://clickhowto.com/wp-content/uploads/2018/01/cocktails.jpg"
+  },
+  {
+    "id": 6,
+    "name": "Desserts",
+    "image": "http://4.bp.blogspot.com/_Pe9obweD_W8/TH5lSLYTgPI/AAAAAAAAABU/jWp0YWwlP8A/s1600/white-chocolate-parfait-flambeed-cherries200711131[1].jpg"
+  },
+  {
+    "id": 7,
+    "name": "Sandwiches",
+    "image": "https://www.rd.com/wp-content/uploads/2016/03/aol-food-perfect-sandwich-ft.jpg"
+  },
+  {
+    "id": 8,
+    "name": "Wraps",
+    "image": "https://www.tasteofhome.com/wp-content/uploads/2018/01/Cranberry-Turkey-Wraps_EXPS_HCA18_27665_D02_22_11b-1.jpg"
+  },
+  {
+    "id": 9,
+    "name": "Sides",
+    "image": "https://www.sickchirpse.com/wp-content/uploads/2016/04/McDonalds-Nuggets-1.jpg"
+  }
+]

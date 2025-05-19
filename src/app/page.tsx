@@ -1,103 +1,80 @@
-import Image from "next/image";
+"use client";
+import React from "react";
+import { Button } from "@/components/common/Button";
+import Carousel from "@/components/common/Carousel";
+import Navbar from "@/components/common/Navbar";
+import CategoriesList from "@/components/food-items/Category";
+import FeaturedItems from "@/components/food-items/FeaturedItems";
+import Link from "next/link";
+import { ArrowRight, Clock, Star, Truck } from "lucide-react";
 
 export default function Home() {
   return (
-    <div className="grid grid-rows-[20px_1fr_20px] items-center justify-items-center min-h-screen p-8 pb-20 gap-16 sm:p-20 font-[family-name:var(--font-geist-sans)]">
-      <main className="flex flex-col gap-[32px] row-start-2 items-center sm:items-start">
-        <Image
-          className="dark:invert"
-          src="/next.svg"
-          alt="Next.js logo"
-          width={180}
-          height={38}
-          priority
-        />
-        <ol className="list-inside list-decimal text-sm/6 text-center sm:text-left font-[family-name:var(--font-geist-mono)]">
-          <li className="mb-2 tracking-[-.01em]">
-            Get started by editing{" "}
-            <code className="bg-black/[.05] dark:bg-white/[.06] px-1 py-0.5 rounded font-[family-name:var(--font-geist-mono)] font-semibold">
-              src/app/page.tsx
-            </code>
-            .
-          </li>
-          <li className="tracking-[-.01em]">
-            Save and see your changes instantly.
-          </li>
-        </ol>
-
-        <div className="flex gap-4 items-center flex-col sm:flex-row">
-          <a
-            className="rounded-full border border-solid border-transparent transition-colors flex items-center justify-center bg-foreground text-background gap-2 hover:bg-[#383838] dark:hover:bg-[#ccc] font-medium text-sm sm:text-base h-10 sm:h-12 px-4 sm:px-5 sm:w-auto"
-            href="https://vercel.com/new?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            <Image
-              className="dark:invert"
-              src="/vercel.svg"
-              alt="Vercel logomark"
-              width={20}
-              height={20}
-            />
-            Deploy now
-          </a>
-          <a
-            className="rounded-full border border-solid border-black/[.08] dark:border-white/[.145] transition-colors flex items-center justify-center hover:bg-[#f2f2f2] dark:hover:bg-[#1a1a1a] hover:border-transparent font-medium text-sm sm:text-base h-10 sm:h-12 px-4 sm:px-5 w-full sm:w-auto md:w-[158px]"
-            href="https://nextjs.org/docs?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            Read our docs
-          </a>
+    <main className="min-h-screen bg-gradient-to-br pb-10 from-orange-50 via-white to-orange-100">
+      <Navbar />
+      {/* Hero Section */}
+      <section className="relative w-full flex flex-col items-center justify-center pt-6 pb-10 px-2 sm:px-6 lg:px-8">
+        <div className="w-full max-w-5xl mx-auto pb-4 rounded-2xl overflow-hidden shadow-lg mb-10">
+          <Carousel />
         </div>
-      </main>
-      <footer className="row-start-3 flex gap-[24px] flex-wrap items-center justify-center">
-        <a
-          className="flex items-center gap-2 hover:underline hover:underline-offset-4"
-          href="https://nextjs.org/learn?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <Image
-            aria-hidden
-            src="/file.svg"
-            alt="File icon"
-            width={16}
-            height={16}
-          />
-          Learn
-        </a>
-        <a
-          className="flex items-center gap-2 hover:underline hover:underline-offset-4"
-          href="https://vercel.com/templates?framework=next.js&utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <Image
-            aria-hidden
-            src="/window.svg"
-            alt="Window icon"
-            width={16}
-            height={16}
-          />
-          Examples
-        </a>
-        <a
-          className="flex items-center gap-2 hover:underline hover:underline-offset-4"
-          href="https://nextjs.org?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <Image
-            aria-hidden
-            src="/globe.svg"
-            alt="Globe icon"
-            width={16}
-            height={16}
-          />
-          Go to nextjs.org →
-        </a>
-      </footer>
-    </div>
+        <div className="w-full max-w-3xl mx-auto bg-white/80 backdrop-blur rounded-xl shadow-lg px-2 py-4 sm:px-8 sm:py-6 flex flex-col gap-4 md:flex-row md:gap-8 md:justify-between">
+          <div className="flex items-center gap-3">
+            <span className="inline-flex items-center justify-center w-10 h-10 rounded-full bg-orange-100 text-orange-500 text-xl font-bold">⏱️</span>
+            <div>
+              <div className="font-semibold text-gray-900">Fast Delivery</div>
+              <div className="text-gray-500 text-sm">30-45 min delivery</div>
+            </div>
+          </div>
+          <div className="flex items-center gap-3">
+            <span className="inline-flex items-center justify-center w-10 h-10 rounded-full bg-orange-100 text-orange-500 text-xl font-bold">⭐</span>
+            <div>
+              <div className="font-semibold text-gray-900">Best Quality</div>
+              <div className="text-gray-500 text-sm">4.8/5 rating</div>
+            </div>
+          </div>
+          <div className="flex items-center gap-3">
+            <span className="inline-flex items-center justify-center w-10 h-10 rounded-full bg-orange-100 text-orange-500 text-xl font-bold">🚚</span>
+            <div>
+              <div className="font-semibold text-gray-900">Free Delivery</div>
+              <div className="text-gray-500 text-sm">On orders above ₹299</div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* Categories Section */}
+      <section className="w-full max-w-7xl mx-auto px-2 sm:px-6 lg:px-8 py-10">
+        <h2 className="text-3xl font-bold text-gray-900">Browse by Category</h2>
+        <CategoriesList />
+        <div className="flex justify-center mt-6">
+          <Link href="/menu" className="inline-flex items-center gap-2 bg-orange-500 hover:bg-orange-600 text-white font-semibold px-6 py-2 rounded-lg shadow transition">
+            View More <ArrowRight className="w-4 h-4" />
+          </Link>
+        </div>
+      </section>
+
+      {/* Featured Items Section */}
+      <section className="w-full max-w-7xl mx-auto px-2 sm:px-6 lg:px-8 py-10">
+        <div className="flex items-center justify-between mb-8">
+          <h2 className="text-3xl font-bold text-gray-900">Featured Items</h2>
+        </div>
+        <FeaturedItems />
+        <div className="flex justify-center mt-6">
+          <Link href="/menu" className="inline-flex items-center gap-2 bg-orange-500 hover:bg-orange-600 text-white font-semibold px-6 py-2 rounded-lg shadow transition">
+            View More <ArrowRight className="w-4 h-4" />
+          </Link>
+        </div>
+      </section>
+
+      {/* Call to Action Section */}
+      <section className="w-full max-w-5xl mx-auto px-2 sm:px-6 lg:px-8 py-14 flex flex-col items-center text-center bg-gradient-to-r from-orange-100 via-white to-orange-50 rounded-2xl shadow-lg mt-12">
+        <h2 className="text-3xl sm:text-4xl font-extrabold text-gray-900 mb-4">Order Now &amp; Enjoy Delicious Food!</h2>
+        <p className="text-lg text-gray-600 mb-8 max-w-2xl mx-auto">Browse our menu, add your favorites to the cart, and get them delivered hot and fresh to your doorstep. Fast, easy, and always tasty!</p>
+        <div className="flex flex-col sm:flex-row gap-4 justify-center">
+          <a href="/menu" className="inline-block bg-orange-500 hover:bg-orange-600 text-white font-semibold px-8 py-3 rounded-lg shadow transition">View Menu</a>
+          <a href="/cart" className="inline-block bg-white border border-orange-500 text-orange-500 hover:bg-orange-50 font-semibold px-8 py-3 rounded-lg shadow transition">Go to Cart</a>
+        </div>
+      </section>
+    </main>
   );
 }

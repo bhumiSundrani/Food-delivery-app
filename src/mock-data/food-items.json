@@ -1,0 +1,184 @@
+{
+  "items": [
+    {
+      "id": 1,
+      "name": "Classic Beef Burger",
+      "category": "Burgers",
+      "type": "non-veg",
+      "price": 149,
+      "rating": 4.6,
+      "image": "https://images.unsplash.com/photo-1550547660-d9450f859349?w=800"
+    },
+    {
+      "id": 2,
+      "name": "Margherita Pizza",
+      "category": "Pizza",
+      "type": "veg",
+      "price": 199,
+      "rating": 4.7,
+      "image": "https://cdn.britannica.com/08/177308-050-94D9D6BE/Food-Pizza-Basil-Tomato.jpg"
+    },
+    {
+      "id": 3,
+      "name": "Creamy Alfredo Pasta",
+      "category": "Pasta",
+      "type": "veg",
+      "price": 179,
+      "rating": 4.5,
+      "image": "https://es.cravingsjournal.com/wp-content/uploads/2023/05/pasta-con-salsa-cremosa-de-tomate-1.jpg"
+    },
+    {
+      "id": 4,
+      "name": "French Fries",
+      "category": "Fries",
+      "type": "veg",
+      "price": 99,
+      "rating": 4.3,
+      "image": "https://th.bing.com/th/id/OIP.YMcBCV0YsoYknxQqGhOnDAHaE7?rs=1&pid=ImgDetMain"
+    },
+    {
+      "id": 5,
+      "name": "Mojito",
+      "category": "Drinks",
+      "type": "veg",
+      "price": 89,
+      "rating": 4.4,
+      "image": "https://clickhowto.com/wp-content/uploads/2018/01/cocktails.jpg"
+    },
+    {
+      "id": 6,
+      "name": "Chocolate Parfait",
+      "category": "Desserts",
+      "type": "veg",
+      "price": 129,
+      "rating": 4.8,
+      "image": "http://4.bp.blogspot.com/_Pe9obweD_W8/TH5lSLYTgPI/AAAAAAAAABU/jWp0YWwlP8A/s1600/white-chocolate-parfait-flambeed-cherries200711131[1].jpg"
+    },
+    {
+      "id": 7,
+      "name": "Club Sandwich",
+      "category": "Sandwiches",
+      "type": "non-veg",
+      "price": 139,
+      "rating": 4.5,
+      "image": "https://www.rd.com/wp-content/uploads/2016/03/aol-food-perfect-sandwich-ft.jpg"
+    },
+    {
+      "id": 8,
+      "name": "Turkey Wrap",
+      "category": "Wraps",
+      "type": "non-veg",
+      "price": 129,
+      "rating": 4.2,
+      "image": "https://www.tasteofhome.com/wp-content/uploads/2018/01/Cranberry-Turkey-Wraps_EXPS_HCA18_27665_D02_22_11b-1.jpg"
+    },
+    {
+      "id": 9,
+      "name": "Chicken Nuggets",
+      "category": "Sides",
+      "type": "non-veg",
+      "price": 109,
+      "rating": 4.4,
+      "image": "https://www.sickchirpse.com/wp-content/uploads/2016/04/McDonalds-Nuggets-1.jpg"
+    },
+    {
+      "id": 11,
+      "name": "Chicken Cheese Burger",
+      "category": "Burgers",
+      "type": "non-veg",
+      "price": 199,
+      "rating": 4.7,
+      "image": "https://images.unsplash.com/photo-1568901346375-23c9450c58cd?w=800&q=80"
+    },
+    {
+      "id": 12,
+      "name": "Paneer Makhani Burger",
+      "category": "Burgers",
+      "type": "veg",
+      "price": 179,
+      "rating": 4.4,
+      "image": "https://images.unsplash.com/photo-1568901346375-23c9450c58cd?w=800&q=80"
+    },
+    {
+      "id": 13,
+      "name": "Chicken Wings",
+      "category": "Sides",
+      "type": "non-veg",
+      "price": 299,
+      "rating": 4.8,
+      "image": "https://images.unsplash.com/photo-1567620832903-9fc6debc209f?w=800&q=80"
+    },
+    {
+      "id": 14,
+      "name": "Pepperoni Pizza",
+      "category": "Pizza",
+      "type": "non-veg",
+      "price": 349,
+      "rating": 4.7,
+      "image": "https://images.unsplash.com/photo-1628840042765-356cda07504e?w=800&q=80"
+    },
+    {
+      "id": 15,
+      "name": "Chocolate Brownie",
+      "category": "Desserts",
+      "type": "veg",
+      "price": 149,
+      "rating": 4.6,
+      "image": "https://images.unsplash.com/photo-1606313564200-e75d5e30476c?w=800&q=80"
+    },
+    {
+      "id": 16,
+      "name": "Ice Cream Sundae",
+      "category": "Desserts",
+      "type": "veg",
+      "price": 199,
+      "rating": 4.4,
+      "image": "https://images.unsplash.com/photo-1563805042-7684c019e1cb?w=800&q=80"
+    },
+    {
+      "id": 19,
+      "name": "Chocolate Cake",
+      "category": "Desserts",
+      "type": "veg",
+      "price": 199,
+      "rating": 4.7,
+      "image": "https://images.unsplash.com/photo-1578985545062-69928b1d9587?w=800&q=80"
+    },
+    {
+      "id": 20,
+      "name": "Cheese Cake",
+      "category": "Desserts",
+      "type": "veg",
+      "price": 249,
+      "rating": 4.8,
+      "image": "https://images.unsplash.com/photo-1533134242443-d4fd215305ad?w=800&q=80"
+    },
+    {
+      "id": 21,
+      "name": "Chicken Arrabiata Pasta",
+      "category": "Pasta",
+      "type": "Non-Veg",
+      "price": 270,
+      "rating": 4.6,
+      "image": "https://images.unsplash.com/photo-1563379926898-05f4575a45d8?w=800&q=80"
+    },
+    {
+      "id": 25,
+      "name": "Strawberry Milkshake",
+      "category": "Beverages",
+      "type": "veg",
+      "price": 149,
+      "rating": 4.3,
+      "image": "https://images.unsplash.com/photo-1577805947697-89e18249d767?w=800&q=80"
+    },
+    {
+      "id": 26,
+      "name": "Chocolate Milkshake",
+      "category": "Beverages",
+      "type": "veg",
+      "price": 149,
+      "rating": 4.4,
+      "image": "https://images.unsplash.com/photo-1572490122747-3968b75cc699?w=800&q=80"
+    }
+  ]
+}
