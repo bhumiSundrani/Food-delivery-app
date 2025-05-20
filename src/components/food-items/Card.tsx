@@ -4,6 +4,7 @@ import { Star, Plus, Minus, ShoppingCart } from 'lucide-react';
 import { useCart } from '@/store/cart-store';
 import Link from 'next/link';
 import Image from 'next/image';
+import { useRouter } from 'next/navigation';
 
 interface CardProps {
   id: number;
@@ -19,6 +20,7 @@ const Card = ({ id, name, price, image, type = "veg", rating = 4.5, initialQuant
   const { addToCart, updateQuantity, items } = useCart();
   const [quantity, setQuantity] = useState(initialQuantity);
   const [showQuantity, setShowQuantity] = useState(false);
+  const router = useRouter();
 
   const cartItem = items.find(item => item.id === id);
   const isInCart = !!cartItem;
@@ -30,6 +32,7 @@ const Card = ({ id, name, price, image, type = "veg", rating = 4.5, initialQuant
       setShowQuantity(true);
     } else {
       updateQuantity(id, quantity);
+      router.push('/cart');
     }
   };
 
