@@ -1,5 +1,5 @@
 "use client"
-import React, { useState, useEffect } from 'react';
+import React, { useState, useEffect, useCallback } from 'react';
 import { ChevronLeft, ChevronRight } from 'lucide-react';
 import Image from 'next/image';
 import Link from 'next/link';
@@ -52,8 +52,7 @@ export default function Carousel({
   // Control auto-play
   const [isPlaying, setIsPlaying] = useState(true);
 
-  // Move nextSlide function above useEffect
-  const nextSlide = () => {
+  const nextSlide = useCallback(() => {
     if (infinite) {
       setCurrentSlide((prev) => (prev + 1) % carouselData.length);
     } else {
@@ -61,7 +60,7 @@ export default function Carousel({
         prev === carouselData.length - 1 ? prev : prev + 1
       );
     }
-  };
+  }, [infinite]);
 
   useEffect(() => {
     if (!isPlaying) return;
@@ -171,12 +170,12 @@ export default function Carousel({
       {/* Navigation dots */}
       {showDots && (
         <div className="flex justify-center mt-4 space-x-2">
-          {carouselData.map((_, index) => (
+          {carouselData.map((slide) => (
             <button
-              key={index}
-              onClick={() => goToSlide(index)}
+              key={slide.id}
+              onClick={() => goToSlide(carouselData.indexOf(slide))}
               className={`w-3 h-3 rounded-full transition-all ${
-                index === currentSlide
+                carouselData.indexOf(slide) === currentSlide
                   ? 'bg-orange-500'
                   : 'bg-gray-300 hover:bg-gray-400'
               }`}

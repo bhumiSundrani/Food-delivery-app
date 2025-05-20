@@ -1,5 +1,6 @@
 "use client";
 import React, { useState } from 'react';
+import { Search } from 'lucide-react';
 import Navbar from "@/components/common/Navbar";
 import Card from "@/components/food-items/Card";
 import mockData from "@/mock-data/food-items.json";
