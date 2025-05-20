@@ -109,7 +109,7 @@ export default function Carousel({
           className="flex transition-transform duration-500 ease-in-out h-full"
           style={{ transform: `translateX(-${currentSlide * 100}%)` }}
         >
-          {carouselData.map((slide, index) => (
+          {carouselData.map((slide) => (
             <div
               key={slide.id}
               className={`w-full flex-shrink-0 relative ${slide.backgroundColor}`}
