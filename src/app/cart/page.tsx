@@ -6,6 +6,7 @@ import Navbar from "@/components/common/Navbar";
 import { useCart } from '@/store/cart-store';
 import { Plus, Minus, Trash2, ArrowLeft } from 'lucide-react';
 import Link from 'next/link';
+import Image from 'next/image';
 
 export default function Cart() {
   const { items, removeFromCart, updateQuantity, clearCart } = useCart();
@@ -49,9 +50,10 @@ export default function Cart() {
                   <div key={item.id} className="flex flex-col sm:flex-row gap-4 py-4 border-b last:border-b-0">
                     {/* Item Image */}
                     <div className="relative w-full sm:w-24 h-48 sm:h-24 rounded-lg overflow-hidden flex-shrink-0">
-                      <img
+                      <Image
                         src={item.image}
                         alt={item.name}
+                        fill
                         className="object-cover"
                         sizes="(max-width: 640px) 100vw, (max-width: 768px) 50vw, 33vw"
                       />

@@ -1,6 +1,8 @@
 "use client"
 import React, { useState, useEffect } from 'react';
 import { ChevronLeft, ChevronRight } from 'lucide-react';
+import Image from 'next/image';
+import Link from 'next/link';
 
 // Sample data for the carousel (you can replace with your own data)
 const carouselData = [
@@ -118,15 +120,18 @@ export default function Carousel({
               className={`w-full flex-shrink-0 relative ${slide.backgroundColor}`}
             >
               {/* Background image */}
-              <img
-                src={slide.image}
-                alt={slide.title}
-                className="w-full h-full object-cover"
-              />
+              <div className="relative w-full h-[400px]">
+                <Image
+                  src={slide.image}
+                  alt={slide.title}
+                  fill
+                  className="object-cover"
+                  sizes="100vw"
+                />
+              </div>
               
               {/* Content overlay */}
-              <div className="absolute inset-0  bg-[rgba(0,0,0,0.4)] flex items-center justify-center">
-
+              <div className="absolute inset-0 bg-[rgba(0,0,0,0.4)] flex items-center justify-center">
                 <div className="text-center text-white px-4">
                   <h2 className="text-2xl md:text-4xl font-bold mb-2">
                     {slide.title}
@@ -134,9 +139,11 @@ export default function Carousel({
                   <p className="text-lg md:text-xl">
                     {slide.subtitle}
                   </p>
-                  <button className="mt-4 bg-orange-500 hover:bg-orange-600 text-white px-6 py-2 rounded-lg font-medium transition-colors">
-                    Order Now
-                  </button>
+                  <Link href="/menu">
+                    <button className="mt-4 bg-orange-500 hover:bg-orange-600 text-white px-6 py-2 rounded-lg font-medium transition-colors">
+                      Order Now
+                    </button>
+                  </Link>
                 </div>
               </div>
             </div>

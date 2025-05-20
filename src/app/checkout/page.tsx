@@ -4,8 +4,9 @@ import React, { useState } from 'react';
 import { Button } from "@/components/common/Button";
 import Navbar from "@/components/common/Navbar";
 import { useCart } from '@/store/cart-store';
-import { ArrowLeft, MapPin, Lock } from 'lucide-react';
+import { ArrowLeft, MapPin, Lock, Clock, CheckCircle2 } from 'lucide-react';
 import Link from 'next/link';
+import Image from 'next/image';
 
 export default function Checkout() {
   const { items, clearCart } = useCart();
@@ -173,9 +174,10 @@ export default function Checkout() {
                 {items.map((item) => (
                   <div key={item.id} className="flex items-center gap-4">
                     <div className="relative w-16 h-16 rounded-lg overflow-hidden flex-shrink-0">
-                      <img
+                      <Image
                         src={item.image}
                         alt={item.name}
+                        fill
                         className="object-cover"
                         sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
                       />

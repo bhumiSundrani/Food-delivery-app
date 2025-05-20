@@ -3,6 +3,7 @@ import React, { JSX, useState } from 'react';
 import { Star, Plus, Minus, ShoppingCart } from 'lucide-react';
 import { useCart } from '@/store/cart-store';
 import Link from 'next/link';
+import Image from 'next/image';
 
 interface CardProps {
   id: number;
@@ -60,13 +61,19 @@ const Card: React.FC<CardProps> = ({ id, name, price, image, description = "", t
   };
 
   return (
-    <Link href={`/menu/${id}`} className="block">
-      <div className="bg-white rounded-lg shadow-md overflow-hidden hover:shadow-lg transition-shadow duration-300">
-        <div className="relative h-48 w-full">
-          <img
+    <div 
+      className="bg-white rounded-lg shadow-md overflow-hidden hover:shadow-lg transition-shadow duration-300"
+      onMouseEnter={() => setIsHovered(true)}
+      onMouseLeave={() => setIsHovered(false)}
+    >
+      <Link href={`/menu/${id}`} className="block">
+        <div className="relative w-full h-48 rounded-t-xl overflow-hidden">
+          <Image
             src={image}
             alt={name}
-            className="w-full h-full object-cover"
+            fill
+            className="object-cover"
+            sizes="(max-width: 640px) 100vw, (max-width: 768px) 50vw, 33vw"
           />
           <div className="absolute top-2 right-2 bg-white rounded-full p-1">
             {type === 'veg' ? (
@@ -86,8 +93,45 @@ const Card: React.FC<CardProps> = ({ id, name, price, image, description = "", t
             </div>
           </div>
         </div>
+      </Link>
+
+      {/* Add to Cart Section */}
+      <div className="px-4 pb-4">
+        {isInCart ? (
+          <div className="flex items-center justify-between bg-orange-50 rounded-lg p-2">
+            <div className="flex items-center gap-2">
+              <button
+                onClick={() => setQuantity(Math.max(1, quantity - 1))}
+                className="p-1 rounded-full hover:bg-orange-100 text-orange-500 transition-colors"
+              >
+                <Minus className="w-4 h-4" />
+              </button>
+              <span className="w-8 text-center text-gray-900 font-medium">{quantity}</span>
+              <button
+                onClick={() => setQuantity(quantity + 1)}
+                className="p-1 rounded-full hover:bg-orange-100 text-orange-500 transition-colors"
+              >
+                <Plus className="w-4 h-4" />
+              </button>
+            </div>
+            <Link
+              href="/cart"
+              className="bg-orange-500 hover:bg-orange-600 text-white px-4 py-2 rounded-lg text-sm font-medium transition-colors"
+            >
+              Update Cart
+            </Link>
+          </div>
+        ) : (
+          <button
+            onClick={handleAddToCart}
+            className="w-full bg-orange-500 hover:bg-orange-600 text-white px-4 py-2 rounded-lg font-medium transition-colors flex items-center justify-center gap-2"
+          >
+            <ShoppingCart className="w-4 h-4" />
+            Add to Cart
+          </button>
+        )}
       </div>
-    </Link>
+    </div>
   );
 };
 
