@@ -52,16 +52,7 @@ export default function Carousel({
   // Control auto-play
   const [isPlaying, setIsPlaying] = useState(true);
 
-  // Auto-play functionality
-  useEffect(() => {
-    if (!isPlaying) return;
-    const interval = setInterval(() => {
-      nextSlide();
-    }, autoPlayTime * 1000);
-    return () => clearInterval(interval);
-  }, [currentSlide, isPlaying, autoPlayTime, nextSlide]);
-
-  // Go to next slide
+  // Move nextSlide function above useEffect
   const nextSlide = () => {
     if (infinite) {
       setCurrentSlide((prev) => (prev + 1) % carouselData.length);
@@ -71,6 +62,14 @@ export default function Carousel({
       );
     }
   };
+
+  useEffect(() => {
+    if (!isPlaying) return;
+    const interval = setInterval(() => {
+      nextSlide();
+    }, autoPlayTime * 1000);
+    return () => clearInterval(interval);
+  }, [currentSlide, isPlaying, autoPlayTime, nextSlide]);
 
   // Go to previous slide
   const prevSlide = () => {
