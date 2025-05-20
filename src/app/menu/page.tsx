@@ -1,9 +1,7 @@
-/* eslint-disable @next/next/no-img-element */
 "use client";
 import React, { useState } from 'react';
 import Navbar from "@/components/common/Navbar";
 import Card from "@/components/food-items/Card";
-import { Search } from "lucide-react";
 import mockData from "@/mock-data/food-items.json";
 
 export default function Menu() {

@@ -4,7 +4,7 @@ import React, { useState } from 'react';
 import { Button } from "@/components/common/Button";
 import Navbar from "@/components/common/Navbar";
 import { useCart } from '@/store/cart-store';
-import { ArrowLeft, MapPin, Lock, Clock, CheckCircle2 } from 'lucide-react';
+import { ArrowLeft, MapPin, Lock } from 'lucide-react';
 import Link from 'next/link';
 import Image from 'next/image';
 

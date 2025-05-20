@@ -55,14 +55,11 @@ export default function Carousel({
   // Auto-play functionality
   useEffect(() => {
     if (!isPlaying) return;
-
     const interval = setInterval(() => {
       nextSlide();
     }, autoPlayTime * 1000);
-
-    // Cleanup interval when component unmounts or when isPlaying changes
     return () => clearInterval(interval);
-  }, [currentSlide, isPlaying, autoPlayTime]);
+  }, [currentSlide, isPlaying, autoPlayTime, nextSlide]);
 
   // Go to next slide
   const nextSlide = () => {

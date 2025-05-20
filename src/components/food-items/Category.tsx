@@ -1,7 +1,6 @@
 "use client";
 import React from 'react';
 import Link from 'next/link';
-import { ArrowRight } from 'lucide-react';
 import Image from 'next/image';
 
 const categories = [
