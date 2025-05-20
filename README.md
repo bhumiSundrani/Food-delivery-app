@@ -2,7 +2,7 @@
 
 A responsive and modern food delivery web application built with **Next.js**. Users can browse food categories, view featured items, and place orders with attractive offers and a clean UI.
 
-Live Demo: [https://your-vercel-deployment-url.vercel.app](https://your-vercel-deployment-url.vercel.app) *(Update this after Vercel deploy)*
+Live Demo: [https://your-vercel-deployment-url.vercel.app](https://food-delivery-app-6obm.vercel.app/)
 
 ---
 
